@@ -32,7 +32,7 @@ instagram_username: cardiacmangoes
 color_scheme: github # this specifies color scheme for syntax highlighting
 
 # Build settings
-theme: jekyll-theme-kagami
+# theme: jekyll-theme-kagami
 markdown: kramdown
 # mathjax: true
 plugins:
