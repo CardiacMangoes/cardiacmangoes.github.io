@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: blank
 title: About
 # navlevel: header
 navtitle: About
