@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 title: About
 # navlevel: header
 navtitle: About
@@ -10,7 +10,7 @@ Hi! I'm a Research Assistant at [BAIR](https://bair.berkeley.edu) working with [
 
 I am currently looking for opportunities in industry starting Fall 2024, if you're interested in working with me please reach out!
 
-*email*: rpeterlinz -at- berkeley.edu
+*email:* rpeterlinz -at- berkeley.edu
 
 ![image](/assets/me.png)
 *Enjoying a savory pastry from [The Cheese Board Bakery](https://cheeseboardcollective.coop)*
