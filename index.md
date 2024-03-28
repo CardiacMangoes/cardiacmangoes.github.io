@@ -13,5 +13,5 @@ Hi! I'm a Research Assistant at [BAIR](https://bair.berkeley.edu) working with [
 
 Always happy to chat, and I am currently looking for opportunities in industry starting Fall 2024, so if you're interested in working with me please reach out!
 
-*email:* rpeterlinz -at- berkeley.edu
-*[resume](/assets/resume.pdf)*
+*email:* rpeterlinz -at- berkeley.edu\\
+[**resume**](/assets/resume.pdf)
