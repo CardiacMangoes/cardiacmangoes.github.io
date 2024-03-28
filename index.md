@@ -6,7 +6,6 @@ navtitle: About
 # navbar_title: about
 # navlevel: header
 ---
-
 ![image](/assets/me.png)
 *Enjoying a savory pastry from [The Cheese Board Bakery](https://cheeseboardcollective.coop)*
 
