@@ -22,4 +22,4 @@ Always happy to chat, and I am currently looking for opportunities in industry s
 ### Toon3D: Seeing Cartoons from a New Perspective
 Ethan Weber\*, __Riley Peterlinz\*__ , Rohan Mathur, Frederik Warburg, Alexei A. Efros, and Angjoo Kanazawa.
 
-| [Project Page](https://toon3d.studio) | [Paper](https://arxiv.org/abs/2405.10320) | [Code](https://github.com/ethanweber/toon3d) |
+\| [Project Page](https://toon3d.studio) \| [Paper](https://arxiv.org/abs/2405.10320) \| [Code](https://github.com/ethanweber/toon3d) \|
