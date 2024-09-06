@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<!-- saved from url=(0090)https://inst.eecs.berkeley.edu/~cs194-26/fa22/upload/files/projFinalAssigned/cs194-26-ago/ -->
+<html style="font-size: 16px;" lang="en" class="u-responsive-xl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="Image Quilting and Neural Style Transfer, Image Quilting, Texture Transfer, Iterative Texture Transfer (B&amp;amp;W), ​Face-In-Toast Image (B&amp;amp;W), Neural Style Transfer">
+    <meta name="description" content="">
+    <title>Home</title>
+    <link rel="stylesheet" href="./Home_files/nicepage.css" media="screen">
+<link rel="stylesheet" href="./Home_files/Home.css" media="screen">
+    <script class="u-script" type="text/javascript" src="./Home_files/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="./Home_files/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.1.5, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="./Home_files/css">
+    
+    
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+  </head>
+  <body data-home-page="Home.html" data-home-page-title="Home" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-0940"><div class="u-clearfix u-sheet u-sheet-1"></div></header>
+    <section class="u-clearfix u-image u-section-1" id="sec-50ae" data-image-width="1365" data-image-height="1024">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-align-center u-black u-container-style u-group u-opacity u-opacity-65 u-radius-9 u-shape-round u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <h1 class="u-text u-title u-text-1">Image Quilting and&nbsp;<br>Neural Style Transfer
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-4-base u-section-2" id="sec-1fc3">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Image Quilting</h1>
+      </div>
+    </section>
+    <section class="u-clearfix u-valign-middle u-section-3" id="carousel_c58a">
+      <p class="u-align-center u-text u-text-1">The goal of this project is to build larger textures from a sampled smaller texture. We go over three methods of progressively improved image quilting.</p>
+      <div class="u-list u-list-1">
+        <div class="u-repeater u-repeater-1">
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+              <h4 class="u-align-center u-custom-item u-text u-text-2"> Randomly Sampled Texture</h4>
+              <p class="u-align-center u-text u-text-default u-text-3">The most basic way to patch random samples from the original patch. This is the most naive method that doesn't work well. We start from the top left and go left to right up to down. This is the same order for the other quilting methods too.</p>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+              <h4 class="u-align-center u-custom-item u-text u-text-default u-text-4">Overlapping Patches</h4>
+              <p class="u-align-center u-text u-text-default u-text-5">The next way to sample texture is to overlap close patches on edges. This method uses convolution to find the closest matching images with an overlapping edge. I use the suggestion from the paper to have overlap be about 1/6 of the patch size.</p>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+              <h4 class="u-align-center u-custom-item u-text u-text-default u-text-6"> Seam Finding</h4>
+              <p class="u-align-center u-text u-text-default u-text-7">This method perforrms similarly as overlapping patches method but then instead of just overlapping the new patch on top of the other images, this method finds a minimal cut using SSD between the new and existing overlap.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-list u-list-2">
+        <div class="u-repeater u-repeater-2">
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-4">
+              <h5 class="u-align-center u-custom-item u-text u-text-8">Randomly Sampled Texture<br>
+              </h5>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-5">
+              <h5 class="u-align-center u-custom-item u-text u-text-default u-text-9">Overlapping Patches</h5>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-6">
+              <h5 class="u-align-center u-custom-item u-text u-text-default u-text-10">Overlapping Patches</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-list u-list-3">
+        <div class="u-repeater u-repeater-3">
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-7">
+              <img class="u-expanded-width u-image u-image-default u-preserve-proportions u-image-1" src="./Home_files/meat1.png" alt="" data-image-width="400" data-image-height="400">
+              <h6 class="u-align-center u-custom-item u-text u-text-11"> outsize=400, patchsize=100<br>
+              </h6>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-8">
+              <img class="u-expanded-width u-image u-image-default u-preserve-proportions u-image-2" src="./Home_files/beef2.png" alt="" data-image-width="400" data-image-height="400">
+              <h6 class="u-align-center u-custom-item u-text u-text-12"> outsize=400, patchsize=100, overlap=20, tol=5</h6>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-9">
+              <img class="u-expanded-width u-image u-image-default u-preserve-proportions u-image-3" src="./Home_files/beef3.png" alt="" data-image-width="400" data-image-height="400">
+              <h6 class="u-align-center u-custom-item u-text u-text-13"> outsize=400, patchsize=100, overlap=20, tol=5</h6>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-10">
+              <img class="u-expanded-width u-image u-image-default u-preserve-proportions u-image-4" src="./Home_files/net1.png" alt="" data-image-width="400" data-image-height="400">
+              <h6 class="u-align-center u-custom-item u-text u-text-14"> outsize=400, patchsize=60</h6>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-11">
+              <img class="u-expanded-width u-image u-image-default u-preserve-proportions u-image-5" src="./Home_files/net2.png" alt="" data-image-width="400" data-image-height="400">
+              <h6 class="u-align-center u-custom-item u-text u-text-15"> outsize=400, patchsize=60,&nbsp;<br>overlap=10, tol=1
+              </h6>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-12">
+              <img class="u-expanded-width u-image u-image-default u-preserve-proportions u-image-6" src="./Home_files/net3.png" alt="" data-image-width="400" data-image-height="400">
+              <h6 class="u-align-center u-custom-item u-text u-text-16"> outsize=400, patchsize=60,&nbsp;<br>overlap=10, tol=1
+              </h6>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-13">
+              <img class="u-expanded-width u-image u-image-default u-preserve-proportions u-image-7" src="./Home_files/stone1.png" alt="" data-image-width="400" data-image-height="400">
+              <h6 class="u-align-center u-custom-item u-text u-text-17"> outsize=400, patchsize=120</h6>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-14">
+              <img class="u-expanded-width u-image u-image-default u-preserve-proportions u-image-8" src="./Home_files/stone2.png" alt="" data-image-width="400" data-image-height="400">
+              <h6 class="u-align-center u-custom-item u-text u-text-18"> outsize=400, patchsize=120, overlap=20, tol=5</h6>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-15">
+              <img class="u-expanded-width u-image u-image-default u-preserve-proportions u-image-9" src="./Home_files/stone3.png" alt="" data-image-width="400" data-image-height="400">
+              <h6 class="u-align-center u-custom-item u-text u-text-19"> outsize=400, patchsize=120, overlap=20, tol=5</h6>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-16">
+              <img class="u-expanded-width u-image u-image-default u-preserve-proportions u-image-10" src="./Home_files/wood1.png" alt="" data-image-width="400" data-image-height="400">
+              <h6 class="u-align-center u-custom-item u-text u-text-20"> outsize=400, patchsize=120</h6>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-17">
+              <img class="u-expanded-width u-image u-image-default u-preserve-proportions u-image-11" src="./Home_files/wood2.png" alt="" data-image-width="400" data-image-height="400">
+              <h6 class="u-align-center u-custom-item u-text u-text-21"> outsize=400, patchsize=120, overlap=20, tol=5</h6>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-18">
+              <img class="u-expanded-width u-image u-image-default u-preserve-proportions u-image-12" src="./Home_files/wood3.png" alt="" data-image-width="400" data-image-height="400">
+              <h6 class="u-align-center u-custom-item u-text u-text-22"> outsize=400, patchsize=120, overlap=20, tol=5</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-list u-list-4">
+        <div class="u-repeater u-repeater-4">
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-19">
+              <h6 class="u-align-center u-custom-item u-text u-text-23">Beef<br>
+              </h6>
+              <img class="u-image u-image-default u-preserve-proportions u-image-13" src="./Home_files/beef.jpg" alt="" data-image-width="180" data-image-height="180">
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-20">
+              <h6 class="u-align-center u-custom-item u-text u-text-24">Net</h6>
+              <img class="u-image u-image-default u-preserve-proportions u-image-14" src="./Home_files/net.jpg" alt="" data-image-width="128" data-image-height="128">
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-21">
+              <h6 class="u-align-center u-custom-item u-text u-text-25">Stone<br>
+              </h6>
+              <img class="u-image u-image-default u-preserve-proportions u-image-15" src="./Home_files/stone.jpg" alt="" data-image-width="192" data-image-height="192">
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-22">
+              <h6 class="u-align-center u-custom-item u-text u-text-26">Wood<br>
+              </h6>
+              <img class="u-image u-image-default u-preserve-proportions u-image-16" src="./Home_files/wood.jpg" alt="" data-image-width="192" data-image-height="192">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-list u-list-5">
+        <div class="u-repeater u-repeater-5">
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-23">
+              <h5 class="u-align-center u-custom-item u-text u-text-27">Original<br>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-4" id="carousel_e541">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-align-center u-text u-text-1">Texture Transfer</h2>
+        <p class="u-align-center u-text u-text-2">The next step in this was use the same SSD overlap and cut to transfer texture in order to make a given image into a certain style. This is done by comparing the SSD patch for the current canvas for image consistency like above and SSD for a base image that you want the image to look similar to. This is paramaterized by the patch size and overlap like before, but also now there is a tradeoff between continuity of style and closeness to the content's shape, we paramaterize this by a variable alpha where the continuity is weighted by (alpha) and content is weighted by (1-alpha).</p>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <h4 class="u-text u-text-3">Content</h4>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-2">
+                <h4 class="u-text u-text-4">Style</h4>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <h4 class="u-text u-text-5">Styled Content<br>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-1">
+                    <div class="u-container-layout u-valign-middle u-container-layout-4">
+                      <img class="u-image u-image-default u-image-1" src="./Home_files/feynman.jpeg" alt="" data-image-width="271" data-image-height="355">
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-2">
+                    <div class="u-container-layout u-valign-middle u-container-layout-5">
+                      <img class="u-image u-image-default u-image-2" src="./Home_files/sketch2.jpeg" alt="" data-image-width="227" data-image-height="375">
+                    </div>
+                  </div>
+                  <div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-3">
+                    <div class="u-container-layout u-container-layout-6">
+                      <img class="u-expanded-width u-image u-image-default u-image-3" src="./Home_files/feynman_sketch2.jpeg" alt="" data-image-width="271" data-image-height="355">
+                      <p class="u-text u-text-6"> patchsize=40, overlap=10, alpha=0.1</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-4">
+                    <div class="u-container-layout u-valign-top u-container-layout-7">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-4" src="./Home_files/krypto.jpg" alt="" data-image-width="800" data-image-height="800">
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-5">
+                    <div class="u-container-layout u-valign-top u-container-layout-8">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-5" src="./Home_files/stone.jpg" alt="" data-image-width="192" data-image-height="192">
+                    </div>
+                  </div>
+                  <div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-6">
+                    <div class="u-container-layout u-container-layout-9">
+                      <img class="u-image u-image-default u-preserve-proportions u-image-6" src="./Home_files/stone_krypto.jpeg" alt="" data-image-width="800" data-image-height="800">
+                      <p class="u-text u-text-7"> patchsize=40, overlap=10, alpha=0.1</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-2">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-7">
+                <div class="u-container-layout u-container-layout-10">
+                  <img class="u-image u-image-default u-image-7" src="./Home_files/riley_small.jpeg" alt="" data-image-width="900" data-image-height="1200">
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-8">
+                <div class="u-container-layout u-container-layout-11">
+                  <img class="u-image u-image-default u-image-8" src="./Home_files/van_gogh_small.jpeg" alt="" data-image-width="900" data-image-height="1200">
+                </div>
+              </div>
+              <div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-9">
+                <div class="u-container-layout u-container-layout-12">
+                  <img class="u-image u-image-default u-image-9" src="./Home_files/riley_gogh_quilt.jpeg" alt="" data-image-width="900" data-image-height="1200">
+                  <p class="u-text u-text-8"> patchsize=60, overlap=10, alpha=0.1</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="u-align-center u-text u-text-9">As you can see, the method works well in that iit does capture the shape of the original image and has some interesting interpretations such as feynman's eye being a very sparse sketch and the hair in the marina picture having some nice rendering given Van Gogh's self-portrait. However, this method is very limited in that we have only one patch size to work with which means it's difficult to capture high- and low-frequency details while keeping the image well-blended.</p>
+        <h2 class="u-align-center u-text u-text-10">Iterative Texture Transfer (B&amp;W)</h2>
+        <p class="u-align-center u-text u-text-11">Next, we can improve the texture transfer with an iterative method. The main idea here is to use progressively smaller patch sizes to capture the low-frequency and high-frequency details at different levels, progressively increasing the value of alpha as well. This not only helps capture detail better, it also blends the texture transfer better. I start out with block sizes that are 2/3 of the smallest axes of the content image, then progressively decreases the patch size to 2/3 of the previous until the patch size reaches &gt;= 20 pixels. The overlap is 1/6 of the patch size. I also change the alpha so that there is more blending at higher frequencies, defined by the following:</p>
+        <img class="u-image u-image-contain u-image-default u-image-10" src="./Home_files/ScreenShot2022-12-12at11.12.49AM.png" alt="" data-image-width="430" data-image-height="90">
+        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-3">
+          <div class="u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-10">
+                    <div class="u-container-layout u-container-layout-13">
+                      <img class="u-expanded-width u-image u-image-default u-image-11" src="./Home_files/feynman.jpeg" alt="" data-image-width="271" data-image-height="355">
+                      <p class="u-text u-text-12">Feynman</p>
+                    </div>
+                  </div>
+                  <div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-11">
+                    <div class="u-container-layout u-valign-top u-container-layout-14">
+                      <img class="u-expanded-width u-image u-image-contain u-image-default u-image-12" src="./Home_files/toast.jpg" alt="" data-image-width="500" data-image-height="484">
+                      <p class="u-text u-text-13">Toast (cropped for middle texture)</p>
+                    </div>
+                  </div>
+                  <div class="u-align-center u-container-style u-layout-cell u-size-20 u-layout-cell-12">
+                    <div class="u-container-layout u-container-layout-15">
+                      <img class="u-image u-image-default u-image-13" src="./Home_files/79e171dc-2ebc-4651-82b3-beaf83d86b17.png" alt="" data-image-width="271" data-image-height="355">
+                      <p class="u-text u-text-14">Feyntoast</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-13">
+                    <div class="u-container-layout u-valign-top u-container-layout-16">
+                      <img class="u-image u-image-default u-image-14" src="./Home_files/riley_small.jpeg" alt="" data-image-width="900" data-image-height="1200">
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-14">
+                    <div class="u-container-layout u-valign-top u-container-layout-17">
+                      <img class="u-image u-image-default u-image-15" src="./Home_files/van_gogh_small.jpeg" alt="" data-image-width="900" data-image-height="1200">
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-15">
+                    <div class="u-container-layout u-container-layout-18">
+                      <img class="u-image u-image-default u-image-16" src="./Home_files/392898ba-18b7-4a63-aa1f-dfcc95f446c5.png" alt="" data-image-width="900" data-image-height="1200">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="u-align-center u-text u-text-15">As you can see, the results are much more visually consistant, with less obvious seams and blocks. I think Feyntoast worked particularly well. I don't think this method capture the content of the waves image as well but I like how the result has Van Gogh's eyesamd is more seamless which makes it feel more like a surrealist painting.</p>
+        <h2 class="u-align-center u-text u-text-16"> Face-In-Toast Image (B&amp;W)</h2>
+        <p class="u-align-center u-text u-text-17">I used iterative texture transfer and feathered blending to turn my friend, Daniel, into a piece of toast.</p>
+        <img class="u-image u-image-contain u-image-default u-image-17" src="./Home_files/toast.jpg" alt="" data-image-width="500" data-image-height="484">
+        <img class="u-image u-image-default u-preserve-proportions u-image-18" src="./Home_files/daniel.jpg" alt="" data-image-width="360" data-image-height="360">
+        <img class="u-image u-image-default u-preserve-proportions u-image-19" src="./Home_files/toastiel_start.png" alt="" data-image-width="360" data-image-height="360">
+        <p class="u-align-center u-text u-text-18">First, I turned Daniel into toast texture using iterative texture transfer. I increased the contrast on his picture because it helps define features for SSD.</p>
+        <img class="u-image u-image-contain u-image-default u-image-20" src="./Home_files/toast_hole.png" alt="" data-image-width="500" data-image-height="484">
+        <img class="u-image u-image-contain u-image-default u-image-21" src="./Home_files/toastiel.png" alt="" data-image-width="500" data-image-height="484">
+        <img class="u-image u-image-default u-preserve-proportions u-image-22" src="./Home_files/toastiel_feathered.png" alt="" data-image-width="360" data-image-height="360">
+        <p class="u-align-center u-text u-text-19">Then, I cut out a portion of the toast, feathered it, and did the inverse feathering to the Daniel Texture, leading to a convincingly Daniel-Toasted Toast</p>
+      </div>
+    </section>
+    <section class="u-clearfix u-palette-2-base u-section-5" id="carousel_0daa">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Neural Style Transfer</h1>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-6" id="sec-b3a1">
+      <p class="u-align-center u-text u-text-1">The natural successor to image quilting is using a neural network to transfer style to an image's content. This method was introduced in research paper "A Neural Algorithm of Artistic Style" from Gatys, Ecker, and Bethge.</p>
+      <p class="u-align-center u-text u-text-2">The main idea behind this style transfer is that we are using a pre-trained network that is good at segmentation (in this case a VGG-11 network) in order to create a new image from two others: one that influences style (color, texture, etc.) and another that establishes content (the actual "things" segmentation detects) . Both the style and content images are pumped through our VGG network and their representations throughout the network (usually the first convolutional layer after a avg pool) is sampled. We sample the style and content image's representation thrroughout the network in order to compare the resulting image with the combined style and content. The style is taken at 5 convolutional layers and compared for loss using the SSD of the gram matrix of the style image and result image. The gram matrix helps define style features in an image rather than its per-pixel content. Content loss comparisons are sampled at one layer of the convolutional network and are direct SSD comparison with the result image.&nbsp;</p>
+      <img class="u-image u-image-contain u-image-default u-image-1" src="./Home_files/vgg.jpg" alt="" data-image-width="600" data-image-height="352">
+      <p class="u-align-center u-text u-text-3">To the left is a VGG-11 network. The paper uses a VGG-19 network but I found this one works just as well despite its smaller size. In fact it works faster because it is smaller! The 5 convolution layers sampled are the very first "conv1_1", and then each convolutional layer after a max pooling (I changed max pool to avg pool in my implementation) "conv2_1",&nbsp;"conv3_1",&nbsp;"conv4_1",&nbsp;"conv5_1". The content layer to compare is a hyperparameter in my model among the "convX_1" layers listed above. The other hyperparameters are the weight of the style (the content loss weight was kept at 1) and then the learning rate of the LBFGS optimizer optimizing the image (default in pytorch is 1 which I kept it at). I also did not have a set number of iterations, rather opting to stop the optimization once its gradient differs by less than 1e-4 between iterations.&nbsp;</p>
+      <p class="u-align-center u-text u-text-4">The first method I tried was starting with a randomized image as the result then optimizing on it. Unfortunately I don't think this works very well for the images I'm going for as seen in the grid of results before.&nbsp;</p>
+      <div class="u-list u-list-1">
+        <div class="u-repeater u-repeater-1">
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+              <img class="u-expanded-width u-image u-image-default u-image-2" src="./Home_files/riley_small.jpeg" alt="" data-image-width="900" data-image-height="1200">
+              <p class="u-text u-text-default u-text-5">Content</p>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+              <img class="u-expanded-width u-image u-image-default u-image-3" src="./Home_files/van_gogh_small.jpeg" alt="" data-image-width="900" data-image-height="1200">
+              <p class="u-text u-text-default u-text-6">Style</p>
+            </div>
+          </div>
+          <div class="u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+              <img class="u-expanded-width u-image u-image-default u-image-4" src="./Home_files/rand.jpeg" alt="" data-image-width="480" data-image-height="640">
+              <p class="u-text u-text-default u-text-7">Initialization</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="u-align-center u-text u-text-8">The following results are ordered by style weight on the x-axis (content weight is 1) and the content convolutional layer compared on y-axis.</p>
+      <div class="u-list u-list-2">
+        <div class="u-repeater u-repeater-2">
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-4">
+              <p class="u-text u-text-9">10^2</p>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-5">
+              <p class="u-text u-text-10">10^3</p>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-6">
+              <p class="u-text u-text-11">10^4</p>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-7">
+              <p class="u-text u-text-12">10^5</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-gallery u-layout-grid u-lightbox u-show-text-none u-gallery-1" data-pswp-uid="1">
+        <div class="u-gallery-inner u-gallery-inner-1">
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="0" data-gallery-uid="1">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/2_conv1_1Medium.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-1">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="1" data-gallery-uid="1">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/3_conv1_1Medium.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-2">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="2" data-gallery-uid="1">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/4_conv1_1Medium.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-3">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="3" data-gallery-uid="1">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/5_conv1_1Medium.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-4">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="4" data-gallery-uid="1">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/2_conv2_1Medium.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-5">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="5" data-gallery-uid="1">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/3_conv2_1Medium.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-6">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="6" data-gallery-uid="1">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/4_conv2_1Medium.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-7">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="7" data-gallery-uid="1">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/5_conv2_1Medium.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-8">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="8" data-gallery-uid="1">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/2_conv3_1Medium.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-9">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="9" data-gallery-uid="1">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/3_conv3_1Medium.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-10">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="10" data-gallery-uid="1">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/4_conv3_1Medium.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-11">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="11" data-gallery-uid="1">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/5_conv3_1Medium.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-12">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="12" data-gallery-uid="1">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/2_conv4_1Medium.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-13">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="13" data-gallery-uid="1">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/3_conv4_1Medium.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-14">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="14" data-gallery-uid="1">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/4_conv4_1Medium.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-15">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="15" data-gallery-uid="1">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/5_conv4_1Medium.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-16">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-list u-list-3">
+        <div class="u-repeater u-repeater-3">
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-8">
+              <p class="u-text u-text-13">conv1_1</p>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-9">
+              <p class="u-text u-text-14"> conv2_1</p>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-10">
+              <p class="u-text u-text-15"> conv3_1</p>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-11">
+              <p class="u-text u-text-16"> conv4_1</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="u-align-center u-text u-text-17">As you can see, the results are very muddy and don't come out as precise as I would like. In turn, I switched to starting with the content image to optimize on. This lead to much more artistically interesting results in my opinion.</p>
+      <div class="u-list u-list-4">
+        <div class="u-repeater u-repeater-4">
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-12">
+              <p class="u-text u-text-18">10^2</p>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-13">
+              <p class="u-text u-text-19">10^3</p>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-14">
+              <p class="u-text u-text-20">10^4</p>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-15">
+              <p class="u-text u-text-21">10^5</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-gallery u-layout-grid u-lightbox u-show-text-none u-gallery-2" data-pswp-uid="2">
+        <div class="u-gallery-inner u-gallery-inner-2">
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="0" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/2_conv1_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-17">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="1" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/3_conv1_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-18">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="2" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/4_conv1_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-19">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="3" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/5_conv1_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-20">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="4" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/2_conv2_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-21">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="5" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/3_conv2_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-22">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="6" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/4_conv2_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-23">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="7" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/5_conv2_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-24">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="8" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/2_conv3_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-25">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="9" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/3_conv3_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-26">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="10" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/4_conv3_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-27">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="11" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/5_conv3_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-28">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="12" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/2_conv4_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-29">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="13" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/3_conv4_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-30">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="14" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/4_conv4_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-31">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="15" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/5_conv4_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-32">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="16" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/2_conv5_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-33">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="17" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/3_conv5_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-34">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="18" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/4_conv5_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-35">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="19" data-gallery-uid="2">
+            <div class="u-back-slide" data-image-width="480" data-image-height="640">
+              <img class="u-back-image u-expanded" src="./Home_files/5_conv5_1.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-36">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-list u-list-5">
+        <div class="u-repeater u-repeater-5">
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-16">
+              <p class="u-text u-text-22">conv1_1</p>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-17">
+              <p class="u-text u-text-23"> conv2_1</p>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-18">
+              <p class="u-text u-text-24"> conv3_1</p>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-19">
+              <p class="u-text u-text-25"> conv4_1</p>
+            </div>
+          </div>
+          <div class="u-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-container-layout-20">
+              <p class="u-text u-text-26"> conv5_1</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="u-align-center u-text u-text-27">As expected, the deeper your content layer is the less defined the shapes become, and as style's weight increases there is a very noticable effect.</p>
+      <h2 class="u-align-center u-text u-text-28">Results</h2>
+      <p class="u-align-center u-text u-text-29">Here is a selection of some of my favorite results.</p>
+      <div class="u-gallery u-layout-grid u-lightbox u-show-text-none u-gallery-3" data-pswp-uid="3">
+        <div class="u-gallery-inner u-gallery-inner-3">
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="0" data-gallery-uid="3">
+            <div class="u-back-slide" data-image-width="900" data-image-height="1200">
+              <img class="u-back-image u-expanded" src="./Home_files/van_gogh_small.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-37">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-none u-gallery-4" data-pswp-uid="4">
+        <div class="u-gallery-inner u-gallery-inner-4">
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="0" data-gallery-uid="4">
+            <div class="u-back-slide" data-image-width="900" data-image-height="1200">
+              <img class="u-back-image u-expanded" src="./Home_files/riley_small.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-38">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="1" data-gallery-uid="4">
+            <div class="u-back-slide">
+              <img class="u-back-image u-expanded" src="./Home_files/yy_4x3.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-39">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="2" data-gallery-uid="4">
+            <div class="u-back-slide" data-image-width="1280" data-image-height="1280">
+              <img class="u-back-image u-expanded" src="./Home_files/danielLarge.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-40">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="3" data-gallery-uid="4">
+            <div class="u-back-slide" data-image-width="933" data-image-height="1244">
+              <img class="u-back-image u-expanded" src="./Home_files/giga_chad.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-41">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="4" data-gallery-uid="4">
+            <div class="u-back-slide" data-image-width="1024" data-image-height="1365">
+              <img class="u-back-image u-expanded" src="./Home_files/riley_gogh.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-42">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="5" data-gallery-uid="4">
+            <div class="u-back-slide" data-image-width="1365" data-image-height="1024">
+              <img class="u-back-image u-expanded" src="./Home_files/YY_Gogh.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-43">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="6" data-gallery-uid="4">
+            <div class="u-back-slide" data-image-width="1024" data-image-height="1024">
+              <img class="u-back-image u-expanded" src="./Home_files/daniel_goh.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-44">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="7" data-gallery-uid="4">
+            <div class="u-back-slide" data-image-width="1024" data-image-height="1365">
+              <img class="u-back-image u-expanded" src="./Home_files/chad_gogh.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-45">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="u-align-center u-text u-text-30">An interesting thing to note in the above image is that the last image's skin was properly colorized to the peachy pale of human skin. I'm not sure why this happened but possibly the segmentation VGG network matched the skin of Van Gogh to the skin of the man</p>
+      <div class="u-gallery u-layout-grid u-lightbox u-show-text-none u-gallery-5" data-pswp-uid="5">
+        <div class="u-gallery-inner u-gallery-inner-5">
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="0" data-gallery-uid="5">
+            <div class="u-back-slide" data-image-width="960" data-image-height="1280">
+              <img class="u-back-image u-expanded" src="./Home_files/needle_3x4Large.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-46">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="1" data-gallery-uid="5">
+            <div class="u-back-slide" data-image-width="843" data-image-height="1280">
+              <img class="u-back-image u-expanded" src="./Home_files/watercolor.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-47">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="2" data-gallery-uid="5">
+            <div class="u-back-slide" data-image-width="960" data-image-height="1280">
+              <img class="u-back-image u-expanded" src="./Home_files/riley_night.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-48">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="3" data-gallery-uid="5">
+            <div class="u-back-slide" data-image-width="960" data-image-height="1280">
+              <img class="u-back-image u-expanded" src="./Home_files/riley_watercolor.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-49">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="4" data-gallery-uid="5">
+            <div class="u-back-slide" data-image-width="1280" data-image-height="960">
+              <img class="u-back-image u-expanded" src="./Home_files/yy_night.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-50">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="5" data-gallery-uid="5">
+            <div class="u-back-slide" data-image-width="1280" data-image-height="960">
+              <img class="u-back-image u-expanded" src="./Home_files/yy_watercolor.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-51">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-gallery u-layout-grid u-lightbox u-show-text-none u-gallery-6" data-pswp-uid="6">
+        <div class="u-gallery-inner u-gallery-inner-6">
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="0" data-gallery-uid="6">
+            <div class="u-back-slide" data-image-width="227" data-image-height="375">
+              <img class="u-back-image u-expanded" src="./Home_files/sketch2.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-52">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="1" data-gallery-uid="6">
+            <div class="u-back-slide" data-image-width="271" data-image-height="355">
+              <img class="u-back-image u-expanded" src="./Home_files/feynman.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-53">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+          <div class="u-effect-hover-zoom u-gallery-item" data-pswp-item-id="2" data-gallery-uid="6">
+            <div class="u-back-slide" data-image-width="271" data-image-height="355">
+              <img class="u-back-image u-expanded" src="./Home_files/feynman_neural.jpeg">
+            </div>
+            <div class="u-over-slide u-shading u-over-slide-54">
+              <h3 class="u-gallery-heading"></h3>
+              <p class="u-gallery-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="u-align-center u-text u-text-31">I also tried to do the sketch-feynman using this method, I think it's more cohesive and recognizable but, ironically, I think the image quilting does a better job of being in the "style" of the sparse sketch.</p>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-cd60"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the Text Element.</p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-design" target="_blank">
+        <span>Website Design</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="https://nicepage.com/static-site-generator" target="_blank">
+        <span>Website Generators</span>
+      </a>. 
+    </section>
+  
+<style>.u-disable-duration * {transition-duration: 0s !important;}</style></body></html>
