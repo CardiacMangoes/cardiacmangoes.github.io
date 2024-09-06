@@ -19,7 +19,11 @@ Always happy to chat, and I am currently looking for opportunities in industry s
 
 # Publications
 
+### Evaluating the Perceptual Alignment between Generative Visual Models and Human Observers on 3D Shape Inferences
+Tyler Bonnen\*, __Riley Peterlinz__, Angjoo Kanazawa, Alexei A. Efros
+\| [Paper](https://2024.ccneuro.org/poster/?id=584) \|
+
 ### Toon3D: Seeing Cartoons from a New Perspective
-Ethan Weber\*, __Riley Peterlinz\*__ , Rohan Mathur, Frederik Warburg, Alexei A. Efros, and Angjoo Kanazawa.
+Ethan Weber\*, __Riley Peterlinz\*__, Rohan Mathur, Frederik Warburg, Alexei A. Efros, and Angjoo Kanazawa.
 
 \| [Project Page](https://toon3d.studio) \| [Paper](https://arxiv.org/abs/2405.10320) \| [Code](https://github.com/ethanweber/toon3d) \|
