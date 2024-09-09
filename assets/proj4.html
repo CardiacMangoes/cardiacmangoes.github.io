@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)https://inst.eecs.berkeley.edu/~cs194-26/fa22/upload/files/proj4A/cs194-26-ago/ -->
+<html style="font-size: 16px;" lang="en" class="u-responsive-xl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="​Images of the Russian Empire, Overview, Pipeline, Align Plates, Unaligned, ​Method, ​Offsets, Crop Borders, Method, Shortcomings, White Balance, Method, Stretch Contrast, Method, Pump Saturation, Method, Final Images, Contrast Equalization Gallery">
+    <meta name="description" content="">
+    <title>Proj4</title>
+    <link rel="stylesheet" href="./proj4_assets/nicepage.css" media="screen">
+<link rel="stylesheet" href="./proj4_assets/Proj4.css" media="screen">
+    <script class="u-script" type="text/javascript" src="./proj4_assets/jquery.js" "="" defer=""></script>
+    <script class="u-script" type="text/javascript" src="./proj4_assets/nicepage.js" "="" defer=""></script>
+    <meta name="generator" content="Nicepage 4.17.10, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="./proj4_assets/css">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Proj4">
+    <meta property="og:type" content="website">
+  </head>
+  <body data-home-page="Proj4.html" data-home-page-title="Proj4" class="u-body u-xl-mode" data-lang="en">
+    <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="1280" data-image-height="855" id="sec-30e5">
+      <img class="u-back-image u-expanded" src="proj4_assets/purple_warped.jpg">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-align-center u-container-style u-group u-opacity u-opacity-60 u-shape-rectangle u-white u-group-1">
+          <div class="u-container-layout u-valign-middle u-container-layout-1">
+            <h1 class="u-text u-text-body-color u-title u-text-1"><b></b><b>Image Warping and Mosaicing</b>
+              <br>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-palette-3-light-2 u-section-2" id="carousel_0d1d">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h1 class="u-text u-text-1">Homography<br>
+        </h1>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-3" id="sec-0298">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-align-center u-text u-text-1">To Rectify an image into a projective mapping we take some keypoints then warp those keypoints to another group of coordinates. We can perform<br>a least squares regression to discover the best projective transformation for these points, then apply the transformation over the entire image by interpolating the image. This is my derivation of calculating the homography matrix from 4+ points.
+        </p>
+        <img class="u-image u-image-contain u-image-default u-image-1" src="./proj4_assets/homography.jpg" alt="" data-image-width="2244" data-image-height="2904">
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-palette-1-light-2 u-section-4" id="carousel_c64e">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h1 class="u-text u-text-1">Rectifying Images<br>
+        </h1>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-5" id="sec-d732">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-align-center u-text u-text-1">We can apply the projective homography to some examples now!</p>
+        <p class="u-align-center u-text u-text-2">Original</p>
+        <p class="u-align-center u-text u-text-3">Rectified</p>
+        <img class="u-image u-image-default u-image-1" src="./proj4_assets/neon_points.jpg" alt="" data-image-width="1280" data-image-height="855">
+        <img class="u-image u-image-default u-image-2" src="./proj4_assets/neon_warped_points.jpg" alt="" data-image-width="1280" data-image-height="855">
+        <p class="u-align-center u-text u-text-4">Here, I chose points arround a neon sign then rectified them so you can see what the sign says more clearly. Notice there is a large dark border at the right side of the rectified image because there is no image data there to rectify.</p>
+        <p class="u-align-center u-text u-text-5">Original</p>
+        <p class="u-align-center u-text u-text-6">Rectified</p>
+        <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1" data-pswp-uid="1">
+          <div class="u-gallery-inner u-gallery-inner-1">
+            <div class="u-effect-fade u-gallery-item" data-pswp-item-id="0" data-gallery-uid="1">
+              <div class="u-back-slide" data-image-width="1280" data-image-height="855">
+                <img class="u-back-image u-expanded" src="./proj4_assets/purple.jpg">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-1">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item" data-pswp-item-id="1" data-gallery-uid="1">
+              <div class="u-back-slide" data-image-width="1280" data-image-height="855">
+                <img class="u-back-image u-expanded" src="./proj4_assets/purple_warped.jpg">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-2">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item" data-pswp-item-id="2" data-gallery-uid="1">
+              <div class="u-back-slide" data-image-width="1106" data-image-height="775">
+                <img class="u-back-image u-expanded" src="./proj4_assets/christ.jpg">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-3">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item" data-pswp-item-id="3" data-gallery-uid="1">
+              <div class="u-back-slide" data-image-width="1106" data-image-height="775">
+                <img class="u-back-image u-expanded" src="./proj4_assets/christ_warped.jpg">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-4">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-palette-4-light-2 u-section-6" id="carousel_44be">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-1">Mosaics<br>
+        </h1>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-7" id="carousel_22e5">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-align-center u-text u-text-1">Now that we can projectively warp images, we can make a mosaic of two or more images! We start with images that share a section and were caught while rotating the camera in a fixed position. If possible, also fix the focal length, focus, ISO, apeture, and white balance.</p>
+        <img class="u-image u-image-default u-image-1" src="./proj4_assets/patio2.jpg" alt="" data-image-width="1280" data-image-height="855">
+        <img class="u-image u-image-default u-image-2" src="./proj4_assets/patio1.jpg" alt="" data-image-width="1280" data-image-height="855">
+        <p class="u-align-center u-text u-text-2">We then label correspondences on both images. These are not exact due to human (me) error.</p>
+        <img class="u-image u-image-default u-image-3" src="./proj4_assets/patio1_points.jpg" alt="" data-image-width="1280" data-image-height="855">
+        <img class="u-image u-image-default u-image-4" src="./proj4_assets/patio2_points.jpg" alt="" data-image-width="1280" data-image-height="855">
+        <p class="u-align-center u-text u-text-3">Then, I took the average of the correspondences across our images and warped each image to that average. This time, the projective transformation keeps all of the photo, not just the parts in the original boundaries.</p>
+        <img class="u-image u-image-default u-image-5" src="./proj4_assets/patio1_points_warped.jpg" alt="" data-image-width="1413" data-image-height="972">
+        <img class="u-image u-image-default u-image-6" src="./proj4_assets/patio2_points_warped.jpg" alt="" data-image-width="1447" data-image-height="988">
+        <p class="u-align-center u-text u-text-4">Now that the images are warped to the projection we want, we can layer them into a mosaic. I did this by calculating the size of the frame we need for the complete mosaic and making masks that would blend the intersecting region. The intersecting region has feathering for a smooth blend.</p>
+        <img class="u-image u-image-default u-image-7" src="./proj4_assets/patio1_patio2_mask.jpg" alt="" data-image-width="2380" data-image-height="988">
+        <p class="u-align-center u-text u-text-5">Intersecting region</p>
+        <img class="u-image u-image-default u-image-8" src="./proj4_assets/patio2_mask.jpg" alt="" data-image-width="2380" data-image-height="988">
+        <img class="u-image u-image-default u-image-9" src="./proj4_assets/patio1_mask.jpg" alt="" data-image-width="2380" data-image-height="988">
+        <p class="u-align-center u-text u-text-6">Left Mask</p>
+        <p class="u-align-center u-text u-text-7">Right Mask</p>
+        <p class="u-align-center u-text u-text-8">With the masks, we can now blend the images. I tried two methods: Linear Blending and blending with a Laplacian Stack. To my surprise, I found the Linear Blending better than the Laplacian for the masks here because the Laplacian blending gave unwanted artifacts at intersecting edges, but are effectively the same.</p>
+        <div class="u-expanded-width u-gallery u-layout-horizontal u-lightbox u-show-text-on-hover u-gallery-1" id="carousel-cf29" data-pswp-uid="2">
+          <div class="u-gallery-inner u-gallery-inner-1" role="listbox"><div class="u-effect-fade u-gallery-item u-gallery-item-1" data-pswp-item-id="0" data-gallery-uid="2"><div class="u-back-slide" data-image-width="2380" data-image-height="988"><img class="u-back-image" src="./proj4_assets/patio1_patio2_linear_blend.jpg" alt="Linear Blending">
+</div><div class="u-align-center u-over-slide u-valign-middle u-over-slide-1"><h3 class="u-gallery-heading" style="width: 1270px; margin-right: auto; margin-left: auto;">Linear Blending</h3><p class="u-gallery-text" style="width: 1270px; margin-right: auto; margin-left: auto;"></p>
+</div>
+</div><div class="u-effect-fade u-gallery-item u-gallery-item-2" data-pswp-item-id="1" data-gallery-uid="2"><div class="u-back-slide" data-image-width="2380" data-image-height="988"><img class="u-back-image" src="./proj4_assets/patio1_patio2_gaussian_blend.jpg" alt="Gaussian Blending">
+</div><div class="u-align-center u-over-slide u-valign-middle u-over-slide-2"><h3 class="u-gallery-heading" style="width: 1270px; margin-right: auto; margin-left: auto;">Gaussian Blending</h3><p class="u-gallery-text" style="width: 1270px; margin-right: auto; margin-left: auto;"></p>
+</div>
+</div></div>
+          <a class="u-absolute-vcenter u-gallery-nav u-gallery-nav-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-gallery-nav-1 u-hidden" href="https://inst.eecs.berkeley.edu/~cs194-26/fa22/upload/files/proj4A/cs194-26-ago/#" role="button">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.847 451.847"><path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path></svg>
+            </span>
+          </a>
+          <a class="u-absolute-vcenter u-gallery-nav u-gallery-nav-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-gallery-nav-2" href="https://inst.eecs.berkeley.edu/~cs194-26/fa22/upload/files/proj4A/cs194-26-ago/#" role="button">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+            <span class="sr-only">
+              <svg viewBox="0 0 451.846 451.847"><path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-palette-2-light-2 u-section-8" id="carousel_411c">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-1">Mosaic Gallery</h1>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-section-9" id="sec-afbf">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-align-center u-text u-text-1">Pic 1</p>
+        <p class="u-align-center u-text u-text-2">Pic 2</p>
+        <p class="u-align-center u-text u-text-3">Final Mosaic</p>
+        <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1" data-pswp-uid="3">
+          <div class="u-gallery-inner u-gallery-inner-1">
+            <div class="u-effect-fade u-gallery-item" data-pswp-item-id="0" data-gallery-uid="3">
+              <div class="u-back-slide" data-image-width="1280" data-image-height="960">
+                <img class="u-back-image u-expanded" src="./proj4_assets/glade1.jpg">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-1">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item" data-pswp-item-id="1" data-gallery-uid="3">
+              <div class="u-back-slide" data-image-width="1280" data-image-height="960">
+                <img class="u-back-image u-expanded" src="./proj4_assets/glade2.jpg">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-2">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item" data-pswp-item-id="2" data-gallery-uid="3">
+              <div class="u-back-slide" data-image-width="2058" data-image-height="1181">
+                <img class="u-back-image u-expanded" src="./proj4_assets/glade1_glade2_linear_blend.jpg">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-3">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item" data-pswp-item-id="3" data-gallery-uid="3">
+              <div class="u-back-slide" data-image-width="1280" data-image-height="855">
+                <img class="u-back-image u-expanded" src="./proj4_assets/labview1.jpg">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-4">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item" data-pswp-item-id="4" data-gallery-uid="3">
+              <div class="u-back-slide" data-image-width="1280" data-image-height="855">
+                <img class="u-back-image u-expanded" src="./proj4_assets/labview2.jpg">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-5">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item" data-pswp-item-id="5" data-gallery-uid="3">
+              <div class="u-back-slide" data-image-width="1920" data-image-height="854">
+                <img class="u-back-image u-expanded" src="./proj4_assets/labview1_labview2_linear_blend.jpg">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-6">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item" data-pswp-item-id="6" data-gallery-uid="3">
+              <div class="u-back-slide" data-image-width="1280" data-image-height="960">
+                <img class="u-back-image u-expanded" src="./proj4_assets/lab1.jpg">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-7">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item" data-pswp-item-id="7" data-gallery-uid="3">
+              <div class="u-back-slide" data-image-width="1280" data-image-height="960">
+                <img class="u-back-image u-expanded" src="./proj4_assets/lab2.jpg">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-8">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+            <div class="u-effect-fade u-gallery-item" data-pswp-item-id="8" data-gallery-uid="3">
+              <div class="u-back-slide" data-image-width="1920" data-image-height="897">
+                <img class="u-back-image u-expanded" src="./proj4_assets/lab1_lab2_linear_blend.jpg">
+              </div>
+              <div class="u-over-slide u-shading u-over-slide-9">
+                <h3 class="u-gallery-heading"></h3>
+                <p class="u-gallery-text"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="u-align-center u-text u-text-4">The mosaics with trees/grass end up with some very high-frequency discrepency that makes the middle of the image look, for lack of a better visceral word, drunk. The bottom mosaic in a lab turned out horribly because I did not rotate the camera correctly when taking the images and the many objects are obviously not aligned properly. I've included them as a cautionary tale of what happens when you use this mosaic creator on bad images. Although, this could be an issue with the keypoints I defined so maybe the automated keypoint finder will fare better.</p>
+      </div>
+    </section>
+  
+<style>.u-disable-duration * {transition-duration: 0s !important;}</style></body></html>
