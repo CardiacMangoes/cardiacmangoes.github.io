@@ -11,18 +11,7 @@ navtitle: About
 
 Hi! I'm a Research Assistant at [BAIR](https://bair.berkeley.edu) working with [Angjoo Kanazawa](https://people.eecs.berkeley.edu/~kanazawa/) and [Alyosha Efros](https://people.eecs.berkeley.edu/~efros/) on projects in qualitative 3D, with a flair for film and animation.
 
-Always happy to chat, and I am currently looking for opportunities in industry starting Fall 2024, so if you're interested in working with me please reach out! Also if you're a fellow film lover, connect with me on [Letterboxd](https://letterboxd.com/CardiacMangoes/).
+Always happy to chat, and I am currently looking for opportunities in industry starting Fall 2024, so if you're interested in working with me please reach out! If you'd like to see the movies that have shaped me, connect with me on [Letterboxd](https://letterboxd.com/CardiacMangoes/). :)
 
-*email:* rpeterlinz -at- berkeley.edu\\
 [**resume**](/assets/resume.pdf)
-
-
-# Publications
-
-### Evaluating the Perceptual Alignment between Generative Visual Models and Human Observers on 3D Shape Inferences
-Tyler Bonnen, __Riley Peterlinz__, Angjoo Kanazawa, Alexei A. Efros\\
-\| [Paper](https://2024.ccneuro.org/poster/?id=584) \|
-
-### Toon3D: Seeing Cartoons from a New Perspective
-Ethan Weber\*, __Riley Peterlinz\*__, Rohan Mathur, Frederik Warburg, Alexei A. Efros, and Angjoo Kanazawa\\
-\| [Project Page](https://toon3d.studio) \| [Paper](https://arxiv.org/abs/2405.10320) \| [Code](https://github.com/ethanweber/toon3d) \|
+*email:* rpeterlinz -at- berkeley.edu\\
