@@ -24,4 +24,4 @@ These projects were done as part of [CS180: Intro to Computer Vision and Computa
 - **Image Quilting and Neural Style Transfer** \| [Project Page](/assets/style.html) \|
 - **Image Warping and Mosaicing** \| [Project Page](/assets/proj4.html) \|
 
-*All projects were written in Python.*åå
+*All projects were written in Python.*
