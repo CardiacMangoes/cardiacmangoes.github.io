@@ -3,8 +3,8 @@ layout: page
 title: About
 # navlevel: header
 navtitle: About
-# navbar_title: about
-# navlevel: header
+navlevel: header
+navbar: true
 ---
 ![image](/assets/me.png)
 *Enjoying a savory pastry from [The Cheese Board Bakery](https://cheeseboardcollective.coop)*

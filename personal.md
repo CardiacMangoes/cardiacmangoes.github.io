@@ -5,7 +5,6 @@ navbar_title: personal
 permalink: /personal/
 lang: en
 navbar: true
-position: 150
 ---
 
 ## Coda
