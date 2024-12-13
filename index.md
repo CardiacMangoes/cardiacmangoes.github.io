@@ -27,7 +27,7 @@ Tyler Bonnen, __Riley Peterlinz__, Angjoo Kanazawa, Alexei A. Efros\\
 \| [Paper](https://2024.ccneuro.org/poster/?id=584) \|\\
 *CCN 2024*
 
-### Toon3D: Seeing Cartoons from a New Perspective
+### Toon3D: Seeing Cartoons from New Perspectives
 Ethan Weber\*, __Riley Peterlinz\*__, Rohan Mathur, Frederik Warburg, Alexei A. Efros, Angjoo Kanazawa\\
 \| [Project Page](https://toon3d.studio) \| [Paper](https://arxiv.org/abs/2405.10320) \| [Code](https://github.com/ethanweber/toon3d) \|\\
 *arXiv 2024*
