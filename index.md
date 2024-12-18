@@ -11,7 +11,7 @@ navbar: true
 
 Hi! I'm a researcher and engineer who is currently working on creative tooling with a startup in Hollywood. 
 
-Before this, I studied Computer Science and Physics at UC Berkeley. I was a Research Assistant at [BAIR](https://bair.berkeley.edu) where I had the pleasure of working with [Angjoo Kanazawa](https://people.eecs.berkeley.edu/~kanazawa/) and [Alyosha Efros](https://people.eecs.berkeley.edu/~efros/), and [Ren Ng](https://www2.eecs.berkeley.edu/Faculty/Homepages/yirenng.html) on projects in computer vision, neuroscience, and colorimetry. My research aspires to understand computational perception; studying how our eyes capture light, process it as visual information, and transform it into art — with downstream applications for filmmaking and animation. 
+Before this, I studied Computer Science and Physics at UC Berkeley. I was a Research Assistant at [BAIR](https://bair.berkeley.edu) where I had the pleasure of working with [Angjoo Kanazawa](https://people.eecs.berkeley.edu/~kanazawa/) and [Alyosha Efros](https://people.eecs.berkeley.edu/~efros/) on projects in 3D computer vision and neuroscience. I also had the fortune of working with [Ren Ng](https://www2.eecs.berkeley.edu/Faculty/Homepages/yirenng.html) on camera colorimetry. My research aspires to understand computational perception; studying how our eyes capture light, process it as visual information, and transform it into art — with downstream applications for filmmaking and animation. 
 
 If you'd like to see the movies that have shaped me, check out my [Letterboxd](https://letterboxd.com/CardiacMangoes/). :)
 
