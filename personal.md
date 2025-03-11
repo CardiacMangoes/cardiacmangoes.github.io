@@ -14,7 +14,7 @@ I want to simplify filmmaking tools so anyone can apply the grammar of the film 
 ___
 ## Where I've failed
 
-*Quick Note: Personal websites like this are meant to showcase achievements. Personal websites like this are meant to showcase achievements that are built on failures.  By sharing where I've failed, I hope to contribute to an environment of reducing the amount of shame people, including myself, feel towards themselves for their failures. This section is an homage to my late cousin, [Courtney Brousseau](https://courtneybrousseau.github.io). 🍍*
+*Quick Note: Personal websites like this are meant to showcase achievements that are built on failures. By sharing where I've failed, I hope to contribute to an environment of reducing the amount of shame people, including myself, feel towards themselves. This section is an homage to my late cousin, [Courtney Brousseau](https://courtneybrousseau.github.io). 🍍*
 
 ### Research
 In a past life, I did research in quantum computing, studying quantum algorithms for simulating quantum field theories. I spent two years in my lab with exceptional mentors and while I learned a lot, the premise for joining was I'd produce a publication. This never happened. After discovering my current research, I made the painful decision of leaving that lab, my work unpublished and unfinished. My work now is more aligned with my passions and that is reflected in my output. However, even when I did submit my first paper for publication, Toon3D—it was rejected. This was crushing. The experience softened me, further alleviating external stresses and bolstered the "eat your vegetables" advice of focusing on long-term growth and learning. I'm happier for it. 
