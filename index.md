@@ -16,7 +16,7 @@ Before this, I studied Computer Science and Physics at [UC Berkeley](https://www
 If you'd like to see the movies that have shaped me, check out my [Letterboxd](https://letterboxd.com/CardiacMangoes/). :)
 
 Always happy to chat, feel free to reach out about movies/cameras/research/color/whatever!\\
-*email:* rpeterlinz -at- berkeley.edu\\
+*email:* rpeterlinz -at- berkeley.edu
 
 ___
 # Publications
