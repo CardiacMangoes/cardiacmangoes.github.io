@@ -9,7 +9,7 @@ navbar: true
 ![image](/assets/me.png)
 *Enjoying a savory pastry from [The Cheese Board Bakery](https://cheeseboardcollective.coop)*
 
-Welcome! I'm Riley. Currently, I'm a researcher and engineer who is currently working on creative tooling at [Inkwell](https://inkwell.tech/). Next year, I will be starting my PhD in Computer Science at [Stanford](https://www.stanford.edu/). 🌲
+Welcome! I'm Riley. Currently, I'm a researcher and engineer working with artists in Hollywood on creative tooling at [Inkwell](https://inkwell.tech/). Next year, I will be starting my PhD in Computer Science at [Stanford](https://www.stanford.edu/). 🌲
 
 Before this, I studied Computer Science and Physics at [UC Berkeley](https://www.berkeley.edu/). 🐻 I was a student researcher at [BAIR](https://bair.berkeley.edu) where I had the pleasure of working with [Angjoo Kanazawa](https://people.eecs.berkeley.edu/~kanazawa/) and [Alyosha Efros](https://people.eecs.berkeley.edu/~efros/) on projects in 3D computer vision and cognitive science. I also had the fortune of working with [Ren Ng](https://www2.eecs.berkeley.edu/Faculty/Homepages/yirenng.html) on camera colorimetry. My research aspires to understand computational perception; studying how our eyes capture light, process it as visual information, and transform it into art — with downstream applications for filmmaking and animation. 
 
