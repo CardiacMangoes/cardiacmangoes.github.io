@@ -7,8 +7,6 @@ description: > # this means to ignore newlines until "baseurl:"
 lang: en # site language (en/ja/zh-Hans/zh-Hant)
 color_scheme: manni # this specifies color scheme for syntax highlighting
 github_username: cardiacmangoes
-twitter_username: cardiacmangoes
-instagram_username: cardiacmangoes
 # google_analytics:
 
 # Build settings
